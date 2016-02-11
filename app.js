@@ -11,8 +11,13 @@ console.log("websocket server created")
 io.on("connection", function(socket) {
   console.log("websocket connection open");
   
-  socket.on('message', function(message) {
-    io.emit('message');
-    console.log('received: %s', 'message');
-  })
+  socket.on('message', function (message) {
+      io.emit('messagee');
+      console.log('received: %s', 'message');
+  });
+
+  socket.on('move right', function (data) {
+      io.emit('move right');
+      console.log('moved right');
+  });
 })
