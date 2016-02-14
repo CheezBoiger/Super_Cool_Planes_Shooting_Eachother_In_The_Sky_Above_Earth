@@ -9,31 +9,44 @@ function init() {
     imgObj.innerHTML = "<img src=\"/imgs/18254.jpg\" height=\"100\" width=\"100\" />";
     imgObj.style.position = 'relative';
     imgObj.style.left = '0px';
+    imgObj.style.top = '0px';
     document.body.appendChild(imgObj);
 }
 
-// Lets move our image to the right.
 function moveRight() {
-    imgObj.style.left = parseInt(imgObj.style.left) + 10 + 'px';
-    socket.emit('move right', { });
+    imgObj.style.left = parseInt(imgObj.style.left) + 50 + 'px';
+    console.log(imgObj.style.left);
 }
 
-// Moves the image left, yet this feature is not yet functional.
-function moveLeft() {   
-    imgObj.style.right = parseInt(imgObj.style.right) + 10 + 'px';
+function moveLeft() {
+    imgObj.style.left = parseInt(imgObj.style.left) - 50 + 'px';
+    console.log(imgObj.style.left);
 }
 
-// None of these are functional.
 function moveUp() {
-    imgObj.style.top = parseInt(imgObj.style.top) + 10 + 'px';
+    imgObj.style.top = parseInt(imgObj.style.top) - 50 + 'px';
+    console.log(imgObj.style.top);
 }
 
-function movedown() {
-    imgObj.style.bottom = parseInt(imgObj.style.bottom) + 10 + 'px';
+function moveDown() {
+    imgObj.style.top = parseInt(imgObj.style.top) + 50 + 'px';
+    console.log(imgObj.style.top);
 }
 
 socket.on('move right', function (data) {
-    imgObj.style.left = parseInt(imgObj.style.left) + 10 + 'px';
+    moveRight();
+});
+
+socket.on('move left', function (data) {
+    moveLeft();
+});
+
+socket.on('move up', function (data) {
+    moveUp();
+});
+
+socket.on('move down', function (data) {
+    moveDown();
 });
 
 window.onload = function () { init(); };

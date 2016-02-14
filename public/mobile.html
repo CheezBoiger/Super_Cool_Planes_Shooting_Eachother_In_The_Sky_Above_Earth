@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>SkyRaiders App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <script type="text/javascript" src="scripts/jquery-1.12.0.min.js"></script>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/custom.css">
+    <script src="/socket.io/socket.io.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row text-center" style="margin-top: 200px;">
+        <a href="#" class="box-btn box-btn-red col-md-2" id="up">Up</a>
+      </div>
+      <div class="row text-center">
+        <a href="#" class="box-btn box-btn-red col-md-2 col-md-offset-3" id="left">Left</a>
+        <a href="#" class="box-btn box-btn-red col-md-2" id="right">Right</a>
+      </div>
+      <div class="row text-center">
+        <a href="#" class="box-btn box-btn-red col-md-2" id="down">Down</a>
+      </div>
+    </div> 
+    <script>
+      var socket = io();
+      $('#right').click(function () {
+        socket.emit('move right', { });
+      });
+      
+      $('#left').click(function () {
+        socket.emit('move left', { });
+      });
+      
+      $('#down').click(function () {
+        socket.emit('move down', { });
+      });
+      
+      $('#up').click(function () {
+        socket.emit('move up', { });
+      });
+    </script>
+  </body>
+</html>

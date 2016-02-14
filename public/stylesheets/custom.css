@@ -1,0 +1,32 @@
+.box-btn {
+    width: 130px !important;
+    margin: 3px;
+    border-style: solid;
+    border-width: 0px 0px 3px;
+    box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;
+    color: #FFFFFF;	   
+    border-radius: 6px;
+    cursor: pointer;
+    display: inline-block;
+    font-style: normal;
+    overflow: hidden;
+    text-align: center;
+    text-decoration: none !important;
+    text-overflow: ellipsis;
+    transition: all 200ms ease-in-out 0s;
+    white-space: nowrap;	
+    font-family: "Gotham Rounded A","Gotham Rounded B",Helvetica,Arial,sans-serif;
+    font-weight: 700;	
+    padding: 19px 39px 18px;
+    font-size: 18px;
+}
+
+.box-btn-red {
+    background-color: #ED5A5A !important;
+    border-color: #EA4343 !important;
+}
+.box-btn-red:hover, .box-btn-red:focus, .box-btn-red:active {
+    background: none repeat scroll 0 0 #EB4848 !important;
+    color: #FFFFFF !important;	
+    border-color: #E83131 !important;    
+}
