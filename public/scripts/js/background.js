@@ -19,14 +19,14 @@ function moveRight() {
 }
 
 function moveLeft() {
-    if (imgObj.style.left > (0 + 'px')) {
+    if (imgObj.style.left > '0px') {
         imgObj.style.left = parseInt(imgObj.style.left) - 50 + 'px';
         console.log(imgObj.style.left);
     }
 }
 
 function moveUp() {
-    if (imgObj.style.top > (0 + 'px')) {
+    if (imgObj.style.top > '0px') {
         imgObj.style.top = parseInt(imgObj.style.top) - 50 + 'px';
         console.log(imgObj.style.top);
     }
