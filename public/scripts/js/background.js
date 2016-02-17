@@ -6,7 +6,7 @@ var button_down = false;
 // Initialize the image object onto the html file.
 function init() {
     imgObj = document.createElement('myImage');
-    imgObj.innerHTML = "<img src=\"/imgs/18254.jpg\" height=\"100\" width=\"100\" />";
+    imgObj.innerHTML = "<img src=\"/assets/18254.jpg\" height=\"100\" width=\"100\" />";
     imgObj.style.position = 'relative';
     imgObj.style.left = '0px';
     imgObj.style.top = '0px';
