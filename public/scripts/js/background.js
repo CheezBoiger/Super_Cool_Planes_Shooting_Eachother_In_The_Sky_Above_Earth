@@ -19,13 +19,17 @@ function moveRight() {
 }
 
 function moveLeft() {
-    imgObj.style.left = parseInt(imgObj.style.left) - 50 + 'px';
-    console.log(imgObj.style.left);
+    if (imgObj.style.left > (0 + 'px')) {
+        imgObj.style.left = parseInt(imgObj.style.left) - 50 + 'px';
+        console.log(imgObj.style.left);
+    }
 }
 
 function moveUp() {
-    imgObj.style.top = parseInt(imgObj.style.top) - 50 + 'px';
-    console.log(imgObj.style.top);
+    if (imgObj.style.top > (0 + 'px')) {
+        imgObj.style.top = parseInt(imgObj.style.top) - 50 + 'px';
+        console.log(imgObj.style.top);
+    }
 }
 
 function moveDown() {
