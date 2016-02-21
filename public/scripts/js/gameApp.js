@@ -13,6 +13,8 @@ window.onload = function () {
         player.width = 550;
         player.height = 350;
         game.physics.enable(player, Phaser.Physics.ARCADE);
+        // Use the keyboard ARROW keys to move the picture. You can move in any direction you want. Up, down, left,
+        // right, up-left, up-right, diagonal, you name it.
         cursors = game.input.keyboard.createCursorKeys();
     }
 
