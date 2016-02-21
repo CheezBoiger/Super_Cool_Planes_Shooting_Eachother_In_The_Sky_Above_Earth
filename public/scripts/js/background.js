@@ -6,7 +6,7 @@ var button_down = false;
 // Initialize the image object onto the html file.
 function init() {
     imgObj = document.createElement('myImage');
-    imgObj.innerHTML = "<img src=\"/imgs/18254.jpg\" height=\"100\" width=\"100\" />";
+    imgObj.innerHTML = "<img src=\"/assets/18254.jpg\" height=\"100\" width=\"100\" />";
     imgObj.style.position = 'relative';
     imgObj.style.left = '0px';
     imgObj.style.top = '0px';
@@ -19,13 +19,17 @@ function moveRight() {
 }
 
 function moveLeft() {
-    imgObj.style.left = parseInt(imgObj.style.left) - 50 + 'px';
-    console.log(imgObj.style.left);
+    if (imgObj.style.left > '0px') {
+        imgObj.style.left = parseInt(imgObj.style.left) - 50 + 'px';
+        console.log(imgObj.style.left);
+    }
 }
 
 function moveUp() {
-    imgObj.style.top = parseInt(imgObj.style.top) - 50 + 'px';
-    console.log(imgObj.style.top);
+    if (imgObj.style.top > '0px') {
+        imgObj.style.top = parseInt(imgObj.style.top) - 50 + 'px';
+        console.log(imgObj.style.top);
+    }
 }
 
 function moveDown() {
