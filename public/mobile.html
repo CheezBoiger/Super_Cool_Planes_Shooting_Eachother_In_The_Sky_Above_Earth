@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="stylesheets/custom.css">
     <script src="/socket.io/socket.io.js"></script>
+    <script src="scripts/phaser.min.js"></script>
   </head>
   <body>
     <div class="container">
@@ -24,6 +25,7 @@
     </div> 
     <script>
       var socket = io();
+
       $('#right').click(function () {
         socket.emit('move right', { });
       });
