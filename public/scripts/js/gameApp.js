@@ -44,20 +44,19 @@ window.onload = function () {
             player.body.velocity.y = -150;
         } 
 
-        socket.on('move right', function (data) {
-            player.body.velocity.x = 750;
-        });
-
-        socket.on('move left', function (data) {
-            player.body.velocity.x = -750;
-        });
-
-        socket.on('move up', function (data) {
-            player.body.velocity.y = -750;
-        });
-
-        socket.on('move down', function (data) {
-            player.body.velocity.y = 750;
+        socket.on('move', function (data) {
+            if (data.x < 2) {
+                player.body.velocity.x = -150;
+            }
+            if (data.x > 2) {
+                player.body.velocity.x = 150;
+            }
+            if (data.y < 2) {
+                player.body.velocity.y = 150;
+            }
+            if (data.y > 2) {
+                player.body.velocity.y = -150;
+            } 
         });
     }
 };

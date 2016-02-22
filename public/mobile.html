@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -21,25 +21,7 @@
       <div class="row text-center">
         <a href="#" class="box-btn box-btn-red col-md-2" id="down">Down</a>
       </div>
-    </div> 
-    <script>
-      var socket = io();
-
-      $('#right').click(function () {
-        socket.emit('move right', { });
-      });
-      
-      $('#left').click(function () {
-        socket.emit('move left', { });
-      });
-      
-      $('#down').click(function () {
-        socket.emit('move down', { });
-      });
-      
-      $('#up').click(function () {
-        socket.emit('move up', { });
-      });
-    </script>
+    </div>
+    <script type="text/javascript" src="scripts/js/mobile.js"></script>
   </body>
 </html>
